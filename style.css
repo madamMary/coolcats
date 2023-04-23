@@ -1,0 +1,282 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+h2 {
+    margin: 0;
+}
+
+.wrapper {
+    min-height: 100vh;
+    padding: 30px;
+    margin: auto;
+    max-width: 1020px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-content: flex-start;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 12px;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgb(221, 184, 243), 0 0 5px #0008;
+    position: relative;
+}
+
+.card .like {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    color: blueviolet;
+    cursor: pointer;
+}
+
+.card .pic {
+    height: 100px;
+    width: 100%;
+    background-color: rgb(221, 184, 243);
+    background-image: url(https://aroundpet.ru/wp-content/uploads/chto-dumayut-koshki-o-lyudyah-1170x767.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.pic.tmp {
+    background-image: url(images/default.png);
+    background-size: contain;
+    background-size: auto 80%;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: rgb(221, 184, 243);
+    transform: scale(1.1, 1.1);
+}
+
+.add {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.modal-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.modal-block {
+    background-color: rgb(71, 68, 68, 0.8);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-block2 {
+    background-color: rgb(71, 68, 68, 0.8);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-block.active {
+    display: flex;
+}
+
+.modal-block2.active {
+    display: flex;
+}
+
+.modal {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    width: calc(100% - 100px);
+    max-width: 400px;
+    max-height: calc(100% - 100px);
+    overflow: auto;
+    position: relative;
+    border: 1px solid blueviolet;
+}
+
+form {
+    display: grid;
+    margin-top: 16px;
+    gap: 8px;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 30px;
+}
+
+/* .preview {
+    height: 200px;
+    background-color: rgb(221, 184, 243);
+    border-radius: 8px;
+    background-image: url("images/default.png");
+    background-position: center;
+    background-size: cover;
+} */
+
+.form__cats {
+    display: grid;
+    gap: 6px;
+    max-width: 400px;
+}
+
+.form__span {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 400px;
+    grid-gap: 18px;
+}
+
+.form-span-1 {
+    grid-column-end: span 1;
+}
+
+.form-span-2 {
+    grid-column-end: span 2;
+}
+
+.form-span-3 {
+    grid-column-end: span 3;
+}
+
+.btn2 {
+    grid-column-start: 3;
+    outline: none;
+    border: none;
+    height: 30px;
+    border-radius: 6px;
+    background-color: blueviolet;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+    padding: 0 12px;
+}
+
+label {
+    cursor: pointer;
+    user-select: none;
+}
+
+input,
+textarea {
+    outline: none;
+    border: 1px solid;
+    padding: 6px 8px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 100%;
+    font: inherit;
+}
+
+[type="checkbox"] {
+    visibility: hidden;
+}
+
+[type="checkbox"]+label {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+[type="checkbox"]:not(:checked)+label::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f004";
+    display: flex;
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    border: 1px solid blueviolet;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: -30px;
+}
+
+
+[type="checkbox"]:checked+label:after {
+    font-family: "FontAwesome";
+    content: "\f004";
+    color: blueviolet;
+    display: flex;
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    border: 1px solid blueviolet;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: -30px;
+}
+
+.color {
+    border: 1px solid blueviolet;
+}
+
+.btn2:hover {
+    background-color: rgb(221, 184, 243);
+}
+
+.card_trash {
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+    cursor: pointer;
+    color: blueviolet;
+    ;
+}
+
+.card_trash:hover {
+    color: rgb(221, 184, 243);
+}
+
+.card_update {
+    position: absolute;
+    left: 40px;
+    bottom: 8px;
+    cursor: pointer;
+    color: blueviolet;
+    ;
+}
+
+.card_update:hover {
+    color: rgb(221, 184, 243);
+}

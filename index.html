@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <button class="add btn">
+        <i class="fa-solid fa-plus"></i>
+    </button>
+    <div class="wrapper"></div>
+    <div class="modal-block">
+        <div class="modal" data-type="add">
+            <button class="modal-close btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h2>Добавить котика</h2>
+            <form id="add" name="add">
+                <div class="form__span">
+                    <div class="form__cats form-span-1">
+                        <label for="id">ID</label>
+                        <input class="color" type="number" name="id" required placeholder="1" id="id" min="1">
+                    </div>
+                    <div class="form__cats form-span-2">
+                        <label for="name">Имя котика</label>
+                        <input class="color" type="text" name="name" required placeholder="Дошик" id="name">
+                    </div>
+                </div>
+                <div class="form__cats form-span-3">
+                    <label for="pic">Изображение</label>
+                    <input class="color" id="pic" type="text" name="image" placeholder="Ссылка на изображение">
+                </div>
+                <div class="form__span">
+                    <div class="form__cats form-span-1">
+                        <label for="age">Возраст</label>
+                        <input class="color" id="age" type="number" placeholder="1" min="0" max="100">
+                    </div>
+                    <div class="form__cats form-span-1">
+                        <label for="rate">Рейтинг</label>
+                        <input class="color" id="rate" type="number" placeholder="5" min="0" max="5">
+                    </div>
+                    <div class="form__cats form-span-1">
+                        <input type="checkbox" id="like" name="favorite">
+                        <label for="like">Любимчик</label>
+                    </div>
+                </div>
+                <div class="form__cats form-span-3">
+                    <label for="add1">Описание</label>
+                    <textarea class="color" type="text" id="add1" name="discription"
+                        placeholder="Расскажите интересненькое об этом котике" rows="3"></textarea>
+                </div>
+                <div class="form__span">
+                    <button class="btn2" type="submit">Добавить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-block2">
+        <div class="modal" data-type="add">
+            <button class="modal-close btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h2>Изменить котика</h2>
+            <form id="upd" name="upd">
+                <div class="form__span">
+                    <div class="form__cats form-span-1">
+                        <label for="id">ID</label>
+                        <input class="color" type="number" name="id" required placeholder="1" id="id" min="1">
+                    </div>
+                    <div class="form__cats form-span-2">
+                        <label for="name">Имя котика</label>
+                        <input class="color name" type="text" name="name" required placeholder="Дошик" id="name">
+                    </div>
+                </div>
+                <div class="form__cats form-span-3">
+                    <label for="pic">Изображение</label>
+                    <input class="color" id="pic" type="text" name="image" placeholder="Ссылка на изображение">
+                </div>
+                <div class="form__span">
+                    <div class="form__cats form-span-1">
+                        <label for="age">Возраст</label>
+                        <input class="color" id="age" type="number" placeholder="1" min="0" max="100">
+                    </div>
+                    <div class="form__cats form-span-1">
+                        <label for="rate">Рейтинг</label>
+                        <input class="color" id="rate" type="number" placeholder="5" min="0" max="5">
+                    </div>
+                    <div class="form__cats form-span-1">
+                        <input type="checkbox" id="like" name="favorite">
+                        <label for="like">Любимчик</label>
+                    </div>
+                </div>
+                <div class="form__cats form-span-3">
+                    <label for="add1">Описание</label>
+                    <input class="color" type="text" id="discription" name="discription"
+                        placeholder="Расскажите интересненькое об этом котике" rows="3"></input>
+                </div>
+                <div class="form__span">
+                    <button class="btn2" type="submit">Изменить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
